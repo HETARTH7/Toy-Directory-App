@@ -18,3 +18,9 @@ body {
 footer{
   text-align: center;
 }
+
+.add-form {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}

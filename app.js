@@ -1,6 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
+const { default: mongoose } = require("mongoose");
 
 const app = express();
 app.use(express.static("public"));
@@ -10,6 +11,13 @@ app.use(
     extended: true,
   })
 );
+mongoose.connect("mongodb://localhost:27017/toyDB");
+
+const toySchema = new mongoose.Schema({
+  name: String,
+  desc: String,
+}); 
+const Toy = new mongoose.model("Toy", toySchema);
 
 app.get("/", (req, res) => res.render("home"));
 app.get("/login", (req, res) => res.render("login"));

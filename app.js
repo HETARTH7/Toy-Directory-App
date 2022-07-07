@@ -31,5 +31,10 @@ app.post("/register");
 
 app.post("/login");
 
-app.post("/add");
+app.post("/add", (req, res) => {
+  const record = {
+    name: req.body.toyName,
+    desc: req.body.toyDesc,
+  };
+});
 app.listen(3000, console.log("Server running at port 3000"));

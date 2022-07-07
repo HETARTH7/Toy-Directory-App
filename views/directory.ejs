@@ -1,4 +1,11 @@
 <%- include('partials/header') %>
-<button type="button" class="btn btn-primary btn-sm add-button">Add New Toy</button>
+<a href="/add">Add</a>
+<% list.forEach((item)=>{ %>
+<form action="/delete" method="post">
+  <h3><%=item.name %></h3>
+  <p><%= item.desc %></p>
+  <button type="submit" value="<%= item._id %> " name="delete">DELETE</button>
+  <hr />
+</form>
 
-
+<% }) %>

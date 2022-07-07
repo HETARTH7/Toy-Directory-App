@@ -1,11 +1,10 @@
-
 body {
-  background-color: #E8ECEF;
+  background-color: #e8ecef;
 }
 
 .centered {
-    padding-top: 200px;
-    text-align: center;
+  padding-top: 200px;
+  text-align: center;
 }
 
 .secret-text {
@@ -15,7 +14,7 @@ body {
   background-color: #000;
 }
 
-footer{
+footer {
   text-align: center;
 }
 
@@ -25,8 +24,6 @@ footer{
   padding: 10px;
 }
 
-.add-button{
-  width: 8rem;
-  margin-left: 44.5rem;
-  margin-top: 5rem;
+.space {
+  padding: 1.5rem;
 }
